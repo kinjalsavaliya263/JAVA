@@ -1,0 +1,18 @@
+
+package Module_2;
+
+class T1 extends Thread {
+	public void run() {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("T1 :" + i);
+		}
+	}
+}
+
+public class O035_Priority_And_Name {
+	public static void main(String[] args) {
+		T1 t1 = new T1();
+
+		t1.start();
+	}
+}

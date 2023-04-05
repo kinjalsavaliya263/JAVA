@@ -1,0 +1,15 @@
+
+package model;
+
+public class Product {
+
+	int pid;
+	String category;
+	String pname;
+	String price;
+	String oldprice;
+	String color;
+	String details;
+	String inbox;
+	
+}

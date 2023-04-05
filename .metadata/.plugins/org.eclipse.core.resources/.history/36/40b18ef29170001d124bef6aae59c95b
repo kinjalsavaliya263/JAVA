@@ -1,0 +1,11 @@
+/*
+ *  W.A.J. P to create one thread by extending Thread class in another Class.
+ */
+
+package Module_2;
+
+public class O032_ThreadClass_To_AnotherClass {
+	public static void main(String[] args) {
+
+	}
+}

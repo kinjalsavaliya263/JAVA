@@ -1,0 +1,149 @@
+
+<%@page import="model.User"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Electro -Ecommerce</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+	rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="css/slick.css" />
+<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+
+<!-- nouislider -->
+<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+	<!-- HEADER -->
+	<header>
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+
+				<%
+				/* String email = (String) session.getAttribute("email"); */
+				User us = (User) request.getAttribute("use");
+				%>
+
+
+
+				<ul class="header-links pull-left">
+					
+				</ul>
+				<ul class="header-links pull-right">
+
+
+
+
+					<%
+					if (us != null) {
+					%>
+
+					<li><a href="myprofile?email=<%=us.getEmail()%>"><i
+							class="fa fa-user"></i>My Profile</a></li>
+					<li><a href="changepass.jsp?email=<%=us.getEmail()%>"><i
+							class="fa fa-key"></i>Change Password</a></li>
+					<li style="color: white;"><b>Welcome <%=us.getFname()%> <%=us.getLname()%></b></li>
+					<li><a href="logout.jsp"><i class="fa fa-user"></i>Logout</a></li>
+					<%
+					} else {
+					%>
+
+					<li><a href="login.jsp"><i class="fa fa-user"></i> login</a></li>
+					<%
+					}
+					%>
+
+
+				</ul>
+			</div>
+		</div>
+		<!-- /TOP HEADER -->
+
+		<!-- MAIN HEADER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3">
+						<div class="header-logo">
+							<a href="#" class="logo"> <img src="./img/logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form>
+								<select class="input-select">
+									<option value="0">All Categories</option>
+									<option value="1">Category 01</option>
+									<option value="1">Category 02</option>
+								</select> <input class="input" placeholder="Search here">
+								<button class="search-btn">Search</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Add Product -->
+							<div>
+								<a href="addproduct?email=<%=us.getEmail()%>"> <i class="fa fa-plus"></i> <span>Add
+										Product</span>
+								</a>
+							</div>
+							<!-- /Add Product -->
+
+							<!-- View Product -->
+							<div >
+								<a href="viewproduct?email=<%=us.getEmail()%>"> <i class="fa fa-eye"></i> <span>View
+										Products</span>
+								</a>
+
+							</div>
+							<!-- /View Product -->
+
+
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+
+
+</body>
+</html>

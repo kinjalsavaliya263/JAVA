@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="std" class="com.Student">
+		<property name="id" value="10"></property>
+		<property name="name" value="kinjal"></property>
+		<property name="email" value="kinjal@gmail.com"></property>
+
+
+		<property name="lang">
+			<list>
+				<value>Gujarati</value>
+				<value>hindi</value>
+				<value>english</value>
+			</list>
+		</property>
+
+
+		<property name="sub">
+			<set>
+				<value>Java</value>
+				<value>Testing</value>
+			</set>
+		</property>
+
+		<property name="adr" ref="adr"></property> 
+		<!-- aani jagya e aapde 1st bean ma autowire="bytype/byname" lai sakie   -->
+	</bean>
+
+	<bean id="adr" class="com.Address">
+		<property name="country" value="India"></property>
+		<property name="state" value="Gujrat"></property>
+		<property name="city" value="Surat"></property>
+
+	</bean>
+
+</beans>

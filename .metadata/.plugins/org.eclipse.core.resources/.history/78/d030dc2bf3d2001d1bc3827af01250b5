@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package dao;
+
+/**
+ * @author Kinjal
+ *
+ */
+public class ProductDao {
+
+}

@@ -1,0 +1,24 @@
+
+package FileIO;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class F004_HW_ReaderWriter {
+public static void main(String[] args) {
+	FileReader fr=null;
+	try {
+		fr=new FileReader("D:\\New folder (2)\\test2.txt");
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	try {
+		fr.close();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}
