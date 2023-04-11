@@ -1,6 +1,6 @@
-<%@page import="com.model.Email"%>
+<%@page import="model.Email"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
-<%@page import="com.model.User"%>
+<%@page import="model.User"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

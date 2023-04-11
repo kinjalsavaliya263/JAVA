@@ -1,3 +1,5 @@
+<%@page import="model.Product"%>
+<%@page import="dao.ProductDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="header.jsp"%>
@@ -11,10 +13,10 @@
 </head>
 <body>
 	<!-- BREADCRUMB -->
-	<div id="breadcrumb" class="section">
-		<!-- container -->
+	<!-- <div id="breadcrumb" class="section">
+		container
 		<div class="container">
-			<!-- row -->
+			row
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="breadcrumb-tree">
@@ -26,11 +28,19 @@
 					</ul>
 				</div>
 			</div>
-			<!-- /row -->
+			/row
 		</div>
-		<!-- /container -->
-	</div>
+		/container
+	</div> -->
 	<!-- /BREADCRUMB -->
+
+	<%
+	int pid = Integer.parseInt(request.getParameter("pid"));
+	ProductDao dao = new ProductDao();
+	Product p = dao.getById(pid);
+	%>
+
+
 
 	<!-- SECTION -->
 	<div class="section">
@@ -42,19 +52,19 @@
 				<div class="col-md-5 col-md-push-2">
 					<div id="product-main-img">
 						<div class="product-preview">
-							<img src="./img/product01.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product03.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product06.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product08.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 					</div>
 				</div>
@@ -64,19 +74,19 @@
 				<div class="col-md-2  col-md-pull-5">
 					<div id="product-imgs">
 						<div class="product-preview">
-							<img src="./img/product01.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product03.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product06.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 
 						<div class="product-preview">
-							<img src="./img/product08.png" alt="">
+							<img src="./images/<%=p.getImage() %>" alt="">
 						</div>
 					</div>
 				</div>
@@ -85,7 +95,7 @@
 				<!-- Product details -->
 				<div class="col-md-5">
 					<div class="product-details">
-						<h2 class="product-name">product name goes here</h2>
+						<h2 class="product-name"><%=p.getPname() %></h2>
 						<div>
 							<div class="product-rating">
 								<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -97,34 +107,31 @@
 						</div>
 						<div>
 							<h3 class="product-price">
-								$980.00
-								<del class="product-old-price">$990.00</del>
+								<%=p.getPrice() %>
+								<del class="product-old-price"><%=p.getOldprice() %></del>
 							</h3>
 							<span class="product-available">In Stock</span>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-							ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p><%=p.getDetails() %></p>
 
 						<div class="product-options">
-							<label> Size <select class="input-select">
+							<!-- <label> Size <select class="input-select">
 									<option value="0">X</option>
-							</select>
+							</select> -->
 							</label> <label> Color <select class="input-select">
-									<option value="0">Red</option>
+									<option value="0"><%=p.getColor() %></option>
 							</select>
 							</label>
 						</div>
 
 						<div class="add-to-cart">
-							<div class="qty-label">
+							<!-- <div class="qty-label">
 								Qty
 								<div class="input-number">
 									<input type="number"> <span class="qty-up">+</span> <span
 										class="qty-down">-</span>
 								</div>
-							</div>
+							</div> -->
 							<button class="add-to-cart-btn">
 								<i class="fa fa-shopping-cart"></i> add to cart
 							</button>
@@ -133,14 +140,13 @@
 						<ul class="product-btns">
 							<li><a href="#"><i class="fa fa-heart-o"></i> add to
 									wishlist</a></li>
-							<li><a href="#"><i class="fa fa-exchange"></i> add to
-									compare</a></li>
+							
 						</ul>
 
 						<ul class="product-links">
 							<li>Category:</li>
-							<li><a href="#">Headphones</a></li>
-							<li><a href="#">Accessories</a></li>
+							<li><a href="#"><%=p.getCategory() %></a></li>
+							
 						</ul>
 
 						<ul class="product-links">
@@ -160,9 +166,9 @@
 					<div id="product-tab">
 						<!-- product tab nav -->
 						<ul class="tab-nav">
-							<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-							<li><a data-toggle="tab" href="#tab2">Details</a></li>
-							<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+							<li class="active"><a data-toggle="tab" href="#tab1">Details</a></li>
+							<li><a data-toggle="tab" href="#tab2">In Box</a></li>
+							<li><a data-toggle="tab" href="#tab3">Reviews</a></li>
 						</ul>
 						<!-- /product tab nav -->
 
@@ -172,14 +178,7 @@
 							<div id="tab1" class="tab-pane fade in active">
 								<div class="row">
 									<div class="col-md-12">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-											elit, sed do eiusmod tempor incididunt ut labore et dolore
-											magna aliqua. Ut enim ad minim veniam, quis nostrud
-											exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in
-											voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-											Excepteur sint occaecat cupidatat non proident, sunt in culpa
-											qui officia deserunt mollit anim id est laborum.</p>
+										<p><%=p.getDetails() %></p>
 									</div>
 								</div>
 							</div>
@@ -189,14 +188,7 @@
 							<div id="tab2" class="tab-pane fade in">
 								<div class="row">
 									<div class="col-md-12">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-											elit, sed do eiusmod tempor incididunt ut labore et dolore
-											magna aliqua. Ut enim ad minim veniam, quis nostrud
-											exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in
-											voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-											Excepteur sint occaecat cupidatat non proident, sunt in culpa
-											qui officia deserunt mollit anim id est laborum.</p>
+										<p><%=p.getInbox() %></p>
 									</div>
 								</div>
 							</div>
@@ -377,10 +369,10 @@
 	<!-- /SECTION -->
 
 	<!-- Section -->
-	<div class="section">
-		<!-- container -->
+	<!-- <div class="section">
+		container
 		<div class="container">
-			<!-- row -->
+			row
 			<div class="row">
 
 				<div class="col-md-12">
@@ -389,7 +381,7 @@
 					</div>
 				</div>
 
-				<!-- product -->
+				product
 				<div class="col-md-3 col-xs-6">
 					<div class="product">
 						<div class="product-img">
@@ -430,9 +422,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- /product -->
+				/product
 
-				<!-- product -->
+				product
 				<div class="col-md-3 col-xs-6">
 					<div class="product">
 						<div class="product-img">
@@ -477,11 +469,11 @@
 						</div>
 					</div>
 				</div>
-				<!-- /product -->
+				/product
 
 				<div class="clearfix visible-sm visible-xs"></div>
 
-				<!-- product -->
+				product
 				<div class="col-md-3 col-xs-6">
 					<div class="product">
 						<div class="product-img">
@@ -523,9 +515,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- /product -->
+				/product
 
-				<!-- product -->
+				product
 				<div class="col-md-3 col-xs-6">
 					<div class="product">
 						<div class="product-img">
@@ -563,14 +555,14 @@
 						</div>
 					</div>
 				</div>
-				<!-- /product -->
+				/product
 
 			</div>
-			<!-- /row -->
+			/row
 		</div>
-		<!-- /container -->
+		/container
 	</div>
-	<!-- /Section -->
+	 --><!-- /Section -->
 
 
 

@@ -34,7 +34,7 @@ public class LoginController extends HttpServlet {
 		if (email.equals(useremail)) {
 			HttpSession session = req.getSession();
 			session.setAttribute("email", email);
-			req.setAttribute("use", use);
+			session.setAttribute("use", use);
 			if (usertype.equals(user)) {
 				req.getRequestDispatcher("sellerindex.jsp").forward(req, resp);
 			} else {
@@ -73,7 +73,7 @@ public class LoginController extends HttpServlet {
 
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
-			request.setAttribute("use", use);
+			session.setAttribute("use", use);
 			if (usertype.equals(user)) {
 				request.getRequestDispatcher("sellerindex.jsp").forward(request, response);
 			} else {

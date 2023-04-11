@@ -792,3 +792,44 @@ Mar 21, 2023 12:57:49.553 [18384:24124:0321/125749.552:ERROR:connection_factory_
 Mar 21, 2023 13:04:37.491 [18384:24124:0321/130437.490:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
 Mar 21, 2023 13:14:37.504 [18384:24124:0321/131437.503:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
 Mar 21, 2023 13:24:37.515 [18384:24124:0321/132437.515:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Apr 06, 2023 16:27:15.684 NEW SESSION
+Apr 06, 2023 16:27:15.684 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 06, 2023 16:36:14.772 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 06, 2023 16:49:52.139 [23964:7484:0406/164952.138:ERROR:CONSOLE(48)] "This document requires 'TrustedScript' assignment.", source:  (48)
+Apr 06, 2023 16:51:25.48 [23964:7484:0406/165125.048:ERROR:CONSOLE(48)] "This document requires 'TrustedScript' assignment.", source:  (48)
+Apr 06, 2023 17:00:12.514 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+Apr 06, 2023 17:01:21.483 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+Apr 06, 2023 17:05:14.701 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+Apr 06, 2023 17:27:34.977 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 06, 2023 18:04:31.964 [16516:24920:0406/180431.963:ERROR:CONSOLE(48)] "This document requires 'TrustedScript' assignment.", source:  (48)
+Apr 06, 2023 18:07:44.184 [16516:24920:0406/180744.184:ERROR:CONSOLE(48)] "This document requires 'TrustedScript' assignment.", source:  (48)
+Apr 06, 2023 18:08:29.177 [16516:24920:0406/180829.177:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
+Apr 06, 2023 18:34:56.572 [16516:24920:0406/183456.571:ERROR:CONSOLE(48)] "This document requires 'TrustedScript' assignment.", source:  (48)
+Apr 06, 2023 18:45:27.553 [16516:8344:0406/184527.552:ERROR:connection_factory_impl.cc(473)] ConnectionHandler failed with net error: -2
+Apr 06, 2023 19:34:12.813 [16516:27116:0406/193412.813:ERROR:get_updates_processor.cc(264)] PostClientToServerMessage() failed during GetUpdates with error 2
+Apr 06, 2023 19:34:13.675 [16516:8344:0406/193413.675:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:34:13.897 [16516:24920:0406/193413.896:ERROR:device_event_log_impl.cc(222)] [19:34:13.896] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Apr 06, 2023 19:34:40.740 [16516:8344:0406/193440.739:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:35:39.706 [16516:8344:0406/193539.705:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:37:08.47 [16516:8344:0406/193708.046:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:39:59.975 [16516:8344:0406/193959.975:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:45:57.152 [16516:8344:0406/194557.151:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 19:55:57.164 [16516:8344:0406/195557.163:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 06, 2023 20:05:43.04 [16516:8344:0406/200543.004:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Apr 06, 2023 20:06:16.513 [16516:8344:0406/200616.513:ERROR:connection_factory_impl.cc(473)] ConnectionHandler failed with net error: -2
+Apr 06, 2023 20:06:18.385 [16516:8344:0406/200618.385:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+Apr 08, 2023 17:31:51.510 NEW SESSION
+Apr 08, 2023 17:31:51.511 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 08, 2023 18:11:14.623 [17520:3428:0408/181114.622:ERROR:connection_factory_impl.cc(473)] ConnectionHandler failed with net error: -2
+Apr 08, 2023 18:11:26.514 [17520:3428:0408/181126.513:ERROR:connection_factory_impl.cc(473)] ConnectionHandler failed with net error: -2
+Apr 08, 2023 18:11:28.505 [17520:3428:0408/181128.505:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+Apr 08, 2023 18:11:37.969 [17520:17384:0408/181137.969:ERROR:device_event_log_impl.cc(222)] [18:11:37.969] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Apr 08, 2023 18:11:47.608 [17520:3428:0408/181147.608:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105
+Apr 08, 2023 18:22:11.758 [17520:17384:0408/182211.758:ERROR:interface_endpoint_client.cc(695)] Message 1 rejected by interface blink.mojom.WidgetHost
+Apr 08, 2023 20:31:09.701 [17520:3428:0408/203109.698:ERROR:connection_factory_impl.cc(473)] ConnectionHandler failed with net error: -2
+Apr 08, 2023 20:36:39.632 [17520:17384:0408/203639.632:ERROR:device_event_log_impl.cc(222)] [20:36:39.631] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Apr 08, 2023 21:23:47.816 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 08, 2023 21:23:59.958 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Apr 08, 2023 21:44:21.481 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

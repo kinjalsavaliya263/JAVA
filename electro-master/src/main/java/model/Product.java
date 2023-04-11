@@ -12,6 +12,7 @@ public class Product {
 	String color;
 	String details;
 	String inbox;
+	String image;
 
 	public int getPid() {
 		return pid;
@@ -83,6 +84,14 @@ public class Product {
 
 	public void setInbox(String inbox) {
 		this.inbox = inbox;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

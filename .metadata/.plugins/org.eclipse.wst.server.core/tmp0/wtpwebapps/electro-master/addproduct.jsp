@@ -38,7 +38,8 @@
 
 				<div class="col-md-7">
 					<!-- Add Product -->
-					<form  method="post" action="ProductController">
+					<form method="post" action="ProductController"
+						enctype="multipart/form-data">
 						<div class="billing-details">
 							<span class="text-danger">${msg}</span> <span
 								class="text-success">${msg1}</span>
@@ -47,12 +48,20 @@
 							</div>
 
 
-							<input type="hidden" name="uid" id="uid">
+							<input type="hidden" name="uid" id="uid" value="<%=us.getUid()%>">
+							<input type="hidden" name="pid" id="pid">
 
-							<div class="form-group">
-								<input class="input" type="text" name="category"
-									placeholder="Category" id="category">
-							</div>
+							<!-- <div class="form-group"> -->
+								<!-- <input class="input" type="text" name="category"
+									placeholder="Category" id="category"> -->
+								<select class="form-group input" name="category" aria-label="Default select example">
+									<option selected>Select Category</option>
+									<option value="laptop">Laptop</option>
+									<option value="smartphone">Smartphone</option>
+									<option value="camera">Camera</option>
+									<option value="accessories">Accessories</option>
+								</select>
+							<!-- </div> -->
 							<div class="form-group">
 								<input class="input" type="text" name="pname"
 									placeholder="Product Name" id="pname">
@@ -79,13 +88,13 @@
 									placeholder="In Box" id="inbox"></textarea>
 							</div>
 							<div class="form-group">
-								
-								 <input class="form-control" type="file" id="image" name="image">
+
+								<input class="form-control" type="file" id="image" name="image">
 							</div>
 
 							<div class="form-group">
-								<button type="submit" name="action" value="addproduct" class="primary-btn order-submit">Add
-									Product</button>
+								<button type="submit" name="action" value="addproduct"
+									class="primary-btn order-submit">Add Product</button>
 							</div>
 
 						</div>

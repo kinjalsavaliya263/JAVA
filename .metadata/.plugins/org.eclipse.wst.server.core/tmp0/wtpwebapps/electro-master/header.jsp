@@ -43,7 +43,7 @@
 
 				<%
 				/* String email = (String) session.getAttribute("email"); */
-				User us = (User) request.getAttribute("use");
+				User us = (User) session.getAttribute("use");
 				%>
 
 
@@ -65,9 +65,11 @@
 					if (us != null) {
 					%>
 
-					<li><a href="myprofile?email=<%=us.getEmail()%>"><i class="fa fa-user"></i>My Profile</a></li>
-					<li><a href="changepass.jsp?email=<%=us.getEmail()%>"><i class="fa fa-key"></i>Change Password</a></li>
-					<li style="color: white;"><b>Welcome <%=us.getFname()%> <%=us.getLname() %></b></li>
+					<li><a href="myprofile?email=<%=us.getEmail()%>"><i
+							class="fa fa-user"></i>My Profile</a></li>
+					<li><a href="changepass.jsp?email=<%=us.getEmail()%>"><i
+							class="fa fa-key"></i>Change Password</a></li>
+					<li style="color: white;"><b>Welcome <%=us.getFname()%> <%=us.getLname()%></b></li>
 					<li><a href="logout.jsp"><i class="fa fa-user"></i>Logout</a></li>
 					<%
 					} else {
@@ -118,9 +120,14 @@
 					<!-- ACCOUNT -->
 					<div class="col-md-3 clearfix">
 						<div class="header-ctn">
+
+							<%
+							if (us != null) {
+							%>
+
 							<!-- Wishlist -->
 							<div>
-								<a href="#"> <i class="fa fa-heart-o"></i> <span>Your
+								<a href="mywishlist.jsp"> <i class="fa fa-heart-o"></i> <span>Your
 										Wishlist</span>
 									<div class="qty">2</div>
 								</a>
@@ -128,66 +135,25 @@
 							<!-- /Wishlist -->
 
 							<!-- Cart -->
-							<div class="dropdown">
+							<div>
+								<a href="mycart.jsp"> <i class="fa fa-shopping-cart"></i> <span>Your
+										Cart</span>
+									<div class="qty">2</div>
+								</a>
+							</div>
+							<!-- <div class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown"
 									aria-expanded="true"> <i class="fa fa-shopping-cart"></i> <span>Your
 										Cart</span>
 									<div class="qty">3</div>
 								</a>
-								<div class="cart-dropdown">
-									<div class="cart-list">
-										<div class="product-widget">
-											<div class="product-img">
-												<img src="./img/product01.png" alt="">
-											</div>
-											<div class="product-body">
-												<h3 class="product-name">
-													<a href="#">product name goes here</a>
-												</h3>
-												<h4 class="product-price">
-													<span class="qty">1x</span>$980.00
-												</h4>
-											</div>
-											<button class="delete">
-												<i class="fa fa-close"></i>
-											</button>
-										</div>
-
-										<div class="product-widget">
-											<div class="product-img">
-												<img src="./img/product02.png" alt="">
-											</div>
-											<div class="product-body">
-												<h3 class="product-name">
-													<a href="#">product name goes here</a>
-												</h3>
-												<h4 class="product-price">
-													<span class="qty">3x</span>$980.00
-												</h4>
-											</div>
-											<button class="delete">
-												<i class="fa fa-close"></i>
-											</button>
-										</div>
-									</div>
-									<div class="cart-summary">
-										<small>3 Item(s) selected</small>
-										<h5>SUBTOTAL: $2940.00</h5>
-									</div>
-									<div class="cart-btns">
-										<a href="#">View Cart</a> <a href="#">Checkout <i
-											class="fa fa-arrow-circle-right"></i></a>
-									</div>
-								</div>
-							</div>
+								</div> -->
 							<!-- /Cart -->
 
-							<!-- Menu Toogle -->
-							<div class="menu-toggle">
-								<a href="#"> <i class="fa fa-bars"></i> <span>Menu</span>
-								</a>
-							</div>
-							<!-- /Menu Toogle -->
+							<%
+							}
+							%>
+
 						</div>
 					</div>
 					<!-- /ACCOUNT -->
@@ -208,13 +174,14 @@
 			<div id="responsive-nav">
 				<!-- NAV -->
 				<ul class="main-nav nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Hot Deals</a></li>
-					<li><a href="#">Categories</a></li>
-					<li><a href="#">Laptops</a></li>
-					<li><a href="#">Smartphones</a></li>
-					<li><a href="#">Cameras</a></li>
-					<li><a href="#">Accessories</a></li>
+
+					<li class="active"><a href="index.jsp">Home</a></li>
+					<li><a href="filter_product?category=laptop">Laptops</a></li>
+					<li><a href="filter_product?category=smartphone">Smartphones</a></li>
+					<li><a href="filter_product?category=camera">Cameras</a></li>
+					<li><a href="filter_product?category=accessories">Accessories</a></li>
+
+
 				</ul>
 				<!-- /NAV -->
 			</div>
